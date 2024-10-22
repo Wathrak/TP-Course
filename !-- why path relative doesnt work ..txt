@@ -1,0 +1,1 @@
+<!-- why path relative doesnt work ./assets/cat-1.png -->
