@@ -28,11 +28,13 @@ export default {
         border: 1px;
         text-align: center;
     }
+
     .category.img {
         width: 120px;
         height: 120px;
         top: -116px;
     }
+
     .category.title { 
         font-family: Quicksand;
         font-size: 16px;
@@ -41,6 +43,7 @@ export default {
         letter-spacing: -0.0004em;
         text-align: center;
     }
+
     .category.item {
         color: #B6B6B6;
         font-family: Lato;
@@ -49,4 +52,5 @@ export default {
         line-height: 18px;
         text-align: center;
     }
+    
 </style>

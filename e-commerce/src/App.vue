@@ -15,9 +15,21 @@
     <br><br><br><br>
 
     <div class="banner">
-      <Banner title="Everyday Fresh & Clean with Our Products" color="#F0E8D5" imgURL="/src/assets/images/onion.png"/>
-      <Banner title="Everyday Fresh & Clean with Our Products" color="#F3E8E8" imgURL="/src/assets/images/strawberry-juice.png"/>
-      <Banner title="Everyday Fresh & Clean with Our Products" color="#E7EAF3" imgURL="/src/assets/images/vegetable-basket.png"/>
+      <Banner 
+        buttonColor="#3BB77E"
+        title="Everyday Fresh & Clean with Our Products" color="#F0E8D5" imgURL="/src/assets/images/onion.png"/>
+      <Banner 
+        title="Make your Breakfast Healthy and Easy" 
+        color="#F3E8E8" 
+        imgURL="/src/assets/images/strawberry-juice.png"
+        buttonColor="#FDC040"
+      />
+      <Banner 
+        title="The best Organic Products Online" 
+        color="#E7EAF3" 
+        imgURL="/src/assets/images/vegetable-basket.png"
+        buttonColor="#b73b8c"
+      />
     </div>
   </div>
 </template>
@@ -42,12 +54,15 @@ export default {
   .main {
     display: block;
   }
+
   .label {
     display: flex;
     gap: 25px;
   }
+
   .banner {
     display: flex;
     gap: 25px;
   }
+
 </style>
