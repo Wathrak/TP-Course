@@ -2,7 +2,7 @@
     <div class="banner-layout" :style="{ backgroundColor: color }">
         <div class="content-layout">
             <div class="title"> {{ title }} </div>
-            <Button buttonColor="buttonColor"/>
+            <Button :buttonColor="buttonColor"/>
         </div>
 
         <div class="img-layout">

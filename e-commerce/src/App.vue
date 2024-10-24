@@ -22,13 +22,13 @@
         title="Make your Breakfast Healthy and Easy" 
         color="#F3E8E8" 
         imgURL="/src/assets/images/strawberry-juice.png"
-        buttonColor="#FDC040"
+        buttonColor="#b73b8c"
       />
       <Banner 
         title="The best Organic Products Online" 
         color="#E7EAF3" 
         imgURL="/src/assets/images/vegetable-basket.png"
-        buttonColor="#b73b8c"
+        buttonColor="#FDC040"
       />
     </div>
   </div>
