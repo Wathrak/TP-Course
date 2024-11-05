@@ -1,0 +1,56 @@
+<template>
+    <div
+      class="category layout"
+      :style="{ backgroundColor: color }"
+    >
+      <img class="category img" :src="image" alt="pic">
+      <div>
+          <div class="category title">{{ title }}</div>
+          <div class="category item">{{ amount }} items</div>
+      </div>
+    
+    </div>
+</template>
+  
+<script>
+export default {
+    props: ['title', 'amount', 'color', 'image'],
+}
+</script>
+
+<style>
+    .category.layout {
+        width: 136px;
+        height: 177px;
+        top: -108px;
+        left: 33px;
+        border-radius: 10px;
+        border: 1px;
+        text-align: center;
+    }
+
+    .category.img {
+        width: 120px;
+        height: 120px;
+        top: -116px;
+    }
+
+    .category.title { 
+        font-family: Quicksand;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.0004em;
+        text-align: center;
+    }
+
+    .category.item {
+        color: #B6B6B6;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+    }
+    
+</style>
