@@ -1,14 +1,14 @@
 <template>
   <div>
     <button
-        :style="{ backgroundColor: buttonColor }"
+      :style="{ backgroundColor: buttonColor }"
     > Shop Now &#x2192; </button>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['buttonColor', ],
+    props: ['buttonColor'],
 }
 </script>
 

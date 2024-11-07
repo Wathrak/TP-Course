@@ -2,7 +2,10 @@
     <div class="banner-layout" :style="{ backgroundColor: color }">
         <div class="content-layout">
             <div class="title"> {{ title }} </div>
-            <Button :buttonColor="buttonColor"/>
+            <Button 
+                :buttonColor="buttonColor"
+                @click="shopNow()"
+            />
         </div>
 
         <div class="img-layout">
@@ -17,6 +20,11 @@ import Button from './Button.vue';
 export default {
     components: { Button },
     props: ['title', 'imgURL', 'color', 'buttonColor'],
+    methods: {
+        shopNow() {
+            alert("Let's shop: " + this.title);
+        }
+    }
 }
 </script>
 

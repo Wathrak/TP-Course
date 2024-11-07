@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style>
+    .category {
+        display: flex;
+        flex-direction: column;
+    }
     .category.layout {
         width: 136px;
         height: 177px;
