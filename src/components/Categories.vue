@@ -25,12 +25,8 @@ export default {
     }
     .category.layout {
         width: 136px;
-        height: 177px;
-        top: -108px;
-        left: 33px;
         border-radius: 10px;
         border: 1px;
-        text-align: center;
     }
 
     .category.img {
