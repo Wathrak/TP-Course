@@ -24,7 +24,7 @@ export default {
         flex-direction: column;
     }
     .category.layout {
-        width: 126px;
+        width: 115px;
         border-radius: 10px;
         border: 1px;
     }

@@ -2,12 +2,15 @@
   <router-view>
     <div class="main">
       <Searchbar/>
+      <Tabbar/>
+      <Hero/>
+
       <Menu @categorySelected="filterByCategory" title="Featured Categories"/>
   
       <br>
       <div class="category">
         <div v-if="categoriesLoading">Loading Categories...</div>
-        <div v-else style="display: flex; gap: 10px; overflow: hidden ">
+        <div v-else style="display: flex; gap: 11px; ">
           <div style="display: inline-flex;" v-for="category in Categories" :key="category">
             <Categories
               :title="category.name"
@@ -51,10 +54,12 @@
   import Menu from '../components/Menu.vue';
   import Product from '../components/Product.vue';
   import Searchbar from '../components/Searchbar.vue';
+import Tabbar from '@/components/Tabbar.vue';
+import Hero from '@/components/Hero.vue';
   
   export default {
       name: 'App',
-      components: { Categories, Promotion, Menu, Product, Searchbar },
+      components: { Categories, Promotion, Menu, Product, Searchbar, Tabbar, Hero },
       setup() {
         const store = useProductStore();
         return {
@@ -65,90 +70,6 @@
           return {
             currentGroupName: 'Fruits',
             currentCategoryId: 5,
-            // categories: [
-            //   {
-            //     title: "Burger", 
-            //     amount: "14",
-            //     color: "#F2FCE4",
-            //     image: "/src/assets/images/burger.png",
-            //   },
-            //   {
-            //     title: "Peach", 
-            //     amount: "17",
-            //     color: "#FFFCEB",
-            //     image: "/src/assets/images/peach.png",
-            //   },
-            //   {
-            //     title: "Organic Kiwi", 
-            //     amount: "21",
-            //     color: "#ECFFEC",
-            //     image: "/src/assets/images/kiwi.png",
-            //   },
-            //   {
-            //     title: "Red Apple", 
-            //     amount: "68",
-            //     color: "#FEEFEA",
-            //     image: "/src/assets/images/apple.png",
-            //   },
-            //   {
-            //     title: "Snack", 
-            //     amount: "21",
-            //     color: "#ECFFEC",
-            //     image: "/src/assets/images/snack.png",
-            //   },
-            //   {
-            //     title: "Black Plum", 
-            //     amount: "25",
-            //     color: "#FFF3FF",
-            //     image: "/src/assets/images/blueberry.png",
-            //   },
-            //   {
-            //     title: "Vegetables", 
-            //     amount: "65",
-            //     color: "#F2FCE4",
-            //     image: "/src/assets/images/cabbage.png",
-            //   },
-            //   {
-            //     title: "Headphones", 
-            //     amount: "33",
-            //     color: "#FFFCEB",
-            //     image: "/src/assets/images/headphone.png",
-            //   },
-            //   {
-            //     title: "Cake & Milk", 
-            //     amount: "54",
-            //     color: "#F2FCE4",
-            //     image: "/src/assets/images/snack2.png",
-            //   },
-            //   {
-            //     title: "Orange", 
-            //     amount: "63",
-            //     color: "#FFF3FF",
-            //     image: "/src/assets/images/orange.png",
-            //   }
-            // ],
-            // promotions: [
-            //   {
-            //     title: "Everyday Fresh & Clean with Our Products",
-            //     buttonColor: "#3BB77E",
-            //     imgURL: "/src/assets/images/onion.png",
-            //     color: "#F0E8D5",
-            //   },
-            //   {
-            //     title: "Make your Breakfast Healthy and Easy",
-            //     buttonColor: "#b73b8c",
-            //     imgURL: "/src/assets/images/strawberry-juice.png",
-            //     color: "#F3E8E8",
-            //   },
-            //   {
-            //     title: "The best Organic Products Online",
-            //     buttonColor: "#FDC040",
-            //     imgURL: "/src/assets/images/vegetable-basket.png",
-            //     color: "#E7EAF3",
-            //   },
-            // ],
-            // categories: [],
-            // promotions: [],
             categoriesLoading: true,
             promotionsLoading: true,
           }
@@ -214,6 +135,7 @@
   <style>
     .main {
       display: block;
+      margin: 0px 50px 0px 50px;
     }
   
     .category {
