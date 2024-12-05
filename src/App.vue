@@ -1,5 +1,5 @@
-<template>
-  <RouterView/>
+<template lang="">
+  <router-view/>
 </template>
 <script>
 export default {
