@@ -1,7 +1,6 @@
 <template>
   <router-view>
     <div class="main">
-      <Searchbar/>
       <Tabbar/>
       <Hero/>
 
@@ -45,21 +44,19 @@
   </router-view>
 </template>
   
-  <script>
+<script>
 
-  import Promotion from '../components/Promotion.vue';
-  import Categories from '../components/Categories.vue';
-  import { useProductStore } from '../stores/product';
-  import { mapState } from 'pinia';
-  import Menu from '../components/Menu.vue';
-  import Product from '../components/Product.vue';
-  import Searchbar from '../components/Searchbar.vue';
-import Tabbar from '@/components/Tabbar.vue';
+import Promotion from '../components/Promotion.vue';
+import Categories from '../components/Categories.vue';
+import { useProductStore } from '../stores/product';
+import { mapState } from 'pinia';
+import Menu from '../components/Menu.vue';
+import Product from '../components/Product.vue';
 import Hero from '@/components/Hero.vue';
   
   export default {
       name: 'App',
-      components: { Categories, Promotion, Menu, Product, Searchbar, Tabbar, Hero },
+      components: { Categories, Promotion, Menu, Product, Hero },
       setup() {
         const store = useProductStore();
         return {

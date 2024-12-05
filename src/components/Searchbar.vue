@@ -1,12 +1,12 @@
 <template>
     <div class="flex justify-between items-center self-center py-4">
-        <div class="flex">
+        <RouterLink to="/" class="flex">
             <img src="../assets/images/logo.png" alt="logo">
             <div class="mx-1">
                 <div class="text-green-500 text-4xl font-semibold">Melon</div>
                 <div class="text-xs font-semibold text-gray-600">MART & GROCERY</div>
             </div>
-        </div>
+        </RouterLink>
 
         <div
             class="flex text-center self-center justify-start border-2 border-[#BCE3C9] rounded-sm w-[500px] h-8 text-sm">

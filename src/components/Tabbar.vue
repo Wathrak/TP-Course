@@ -5,10 +5,10 @@
             Browse All Categories
         </button>
 
-        <div class="flex gap-4 ml-10">
-            <div>
-                <i class="fa-solid fa-fire" style="color: #3BB77E;"></i>
-                Hot Deals
+        <div class="flex gap-4 ml-10 cursor-pointer">
+            <div class="flex">
+                <i class="fa-solid fa-fire mt-[3px] mx-1" style="color: #3BB77E;"></i>
+                <RouterLink to="/categories/1">Hot Deals</RouterLink>
             </div>
             <div>Home</div>
             <div>Food</div>
