@@ -9,20 +9,19 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/categories/:categoryId',
       name: 'category',
-      component: CategoryView
+      component: CategoryView,
     },
     {
       path: '/products/:productId',
       name: 'product',
-      component: ProductView
+      component: ProductView,
     },
-    
-  ]
+  ],
 })
 
 export default router

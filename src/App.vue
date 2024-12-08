@@ -1,15 +1,13 @@
 <template>
-  <AppHeader/>
-  <router-view/>
+  <AppHeader />
+  <router-view />
 </template>
 <script>
-import AppHeader from './components/AppHeader.vue';
-import HomeView from './views/HomeView.vue';
+import AppHeader from './components/AppHeader.vue'
+import HomeView from './views/HomeView.vue'
 
 export default {
-  components: {AppHeader, HomeView}
+  components: { AppHeader, HomeView },
 }
 </script>
-<style>
-
-</style>
+<style></style>
