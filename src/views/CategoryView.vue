@@ -11,7 +11,11 @@
       <div class="text-[48px] font-semibold">
         {{ Categories[categoryId].name }}
       </div>
-      <Navigatebar first="Home" second="Categories" third="Coke & Milk" />
+      <Navigatebar
+        first="Home"
+        second="Categories"
+        :third="Categories[categoryId].name"
+      />
     </div>
   </div>
 </template>

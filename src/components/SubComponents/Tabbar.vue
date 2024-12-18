@@ -8,13 +8,13 @@
     <div class="flex gap-4 ml-10 cursor-pointer">
       <div class="flex">
         <i class="fa-solid fa-fire mt-[3px] mx-1" style="color: #3bb77e"></i>
-        <RouterLink to="/categories/1">Hot Deals</RouterLink>
+        <RouterLink to="/categories/0">Hot Deals</RouterLink>
       </div>
 
       <div
         v-for="(title, index) in titles"
         :key="index"
-        @click="handleNav(index)"
+        @click="handleNav(index + 1)"
       >
         {{ title }}
       </div>
