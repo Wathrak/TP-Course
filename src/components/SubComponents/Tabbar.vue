@@ -10,13 +10,14 @@
         <i class="fa-solid fa-fire mt-[3px] mx-1" style="color: #3bb77e"></i>
         <RouterLink to="/categories/1">Hot Deals</RouterLink>
       </div>
-      <div>Home</div>
-      <div>Food</div>
-      <div>Vegetables</div>
-      <div>Drink</div>
-      <div>Cookie</div>
-      <div>Meat & Seafood</div>
-      <div>Bakery</div>
+
+      <div
+        v-for="(title, index) in titles"
+        :key="index"
+        @click="handleNav(index)"
+      >
+        {{ title }}
+      </div>
     </div>
 
     <div class="flex">
@@ -31,6 +32,27 @@
   </div>
 </template>
 <script>
-export default {}
+import { RouterLink } from 'vue-router'
+
+export default {
+  data() {
+    return {
+      titles: [
+        'Home',
+        'Food',
+        'Vegetables',
+        'Drink',
+        'Cookie',
+        'Meat & Seafood',
+        'Bakery',
+      ],
+    }
+  },
+  methods: {
+    handleNav(index) {
+      this.$router.push('/categories/' + index)
+    },
+  },
+}
 </script>
 <style></style>

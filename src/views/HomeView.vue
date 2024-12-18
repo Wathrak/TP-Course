@@ -16,6 +16,7 @@
             :key="category"
           >
             <Categories
+              :categoryId="category.id - 1"
               :title="category.name"
               :amount="category.productCount"
               :color="category.color"
@@ -59,18 +60,13 @@ import Hero from '@/components/Hero.vue'
 export default {
   name: 'App',
   components: { Categories, Promotion, Menu, Product, Hero },
-  setup() {
-    const store = useProductStore()
-    return {
-      store,
-    }
-  },
+
   data() {
     return {
       currentGroupName: 'Fruits',
       currentCategoryId: 5,
-      categoriesLoading: true,
-      promotionsLoading: true,
+      categoriesLoading: false,
+      promotionsLoading: false,
     }
   },
 
@@ -112,21 +108,6 @@ export default {
         return popularProducts
       },
     }),
-  },
-
-  async mounted() {
-    await this.store.fetchCategories().then(() => {
-      this.categoriesLoading = false
-    })
-    await this.store.fetchPromotions().then(() => {
-      this.promotionsLoading = false
-    })
-    await this.store.fetchProducts().then(() => {
-      this.productsLoading = false
-    })
-    await this.store.fetchGroups().then(() => {
-      this.groupsLoading = false
-    })
   },
 }
 </script>

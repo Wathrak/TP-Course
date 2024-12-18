@@ -8,16 +8,25 @@
     />
 
     <div class="flex flex-col justify-center mx-12">
-      <div class="text-[48px] font-semibold">Coke & Milk</div>
+      <div class="text-[48px] font-semibold">
+        {{ Categories[categoryId].name }}
+      </div>
       <Navigatebar first="Home" second="Categories" third="Coke & Milk" />
     </div>
   </div>
 </template>
 <script>
+import Categories from '@/components/Categories.vue'
 import Navigatebar from '@/components/SubComponents/Navigatebar.vue'
+import { useProductStore } from '@/stores/product'
+import { mapState } from 'pinia'
 
 export default {
+  props: { categoryId: Number },
   components: { Navigatebar },
+  computed: {
+    ...mapState(useProductStore, { Categories: 'categories' }),
+  },
 }
 </script>
 <style lang=""></style>

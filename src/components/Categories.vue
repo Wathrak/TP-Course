@@ -1,5 +1,5 @@
 <template>
-  <RouterLink to="/categories/1">
+  <RouterLink :to="'/categories/' + categoryId">
     <div class="category layout" :style="{ backgroundColor: color }">
       <img class="category img" :src="image" alt="pic" />
       <div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ['title', 'amount', 'color', 'image'],
+  props: ['title', 'amount', 'color', 'image', 'categoryId'],
 }
 </script>
 

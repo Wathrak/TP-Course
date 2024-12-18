@@ -1,51 +1,50 @@
 <template>
   <div class="product-container">
-    <RouterLink to="/products/1">
-      <div class="product-grid">
+    <div class="product-grid">
+      <div
+        v-for="(product, index) in products"
+        :key="index"
+        @click="$router.push('/products/' + index)"
+        class="product-card"
+      >
         <div
-          v-for="(product, index) in products"
-          :key="index"
-          class="product-card"
+          class="badge"
+          v-if="product.badge"
+          :style="{
+            backgroundColor:
+              product.badge === 'Hot'
+                ? '#FD6E6E'
+                : product.badge === 'Sale'
+                  ? '#FDC040'
+                  : '#3BB77E',
+          }"
         >
-          <div
-            class="badge"
-            v-if="product.badge"
-            :style="{
-              backgroundColor:
-                product.badge === 'Hot'
-                  ? '#FD6E6E'
-                  : product.badge === 'Sale'
-                    ? '#FDC040'
-                    : '#3BB77E',
-            }"
+          {{ product.badge }}
+        </div>
+        <div style="height: 30px" v-else></div>
+        <div style="height: 200px">
+          <img :src="product.image" alt="img" class="product-image" />
+        </div>
+        <p class="product-brand">{{ product.brand }}</p>
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-rating">
+          <i class="fa-solid fa-star" style="color: #ffdf00"></i>
+          <i class="fa-solid fa-star" style="color: #ffdf00"></i>
+          <i class="fa-solid fa-star" style="color: #ffdf00"></i>
+          <i class="fa-solid fa-star" style="color: #ffdf00"></i>
+          <i class="fas fa-star" style="color: #cbd5e1"></i>
+          (4.0)
+        </p>
+        <p class="product-weight">{{ product.weight }} gram</p>
+        <div class="product-pricing">
+          <span class="current-price">${{ product.price }}</span>
+          <span v-if="product.oldPrice" class="old-price"
+            >${{ product.oldPrice }}</span
           >
-            {{ product.badge }}
-          </div>
-          <div style="height: 30px" v-else></div>
-          <div style="height: 200px">
-            <img :src="product.image" alt="img" class="product-image" />
-          </div>
-          <p class="product-brand">{{ product.brand }}</p>
-          <h3 class="product-name">{{ product.name }}</h3>
-          <p class="product-rating">
-            <i class="fa-solid fa-star" style="color: #ffdf00"></i>
-            <i class="fa-solid fa-star" style="color: #ffdf00"></i>
-            <i class="fa-solid fa-star" style="color: #ffdf00"></i>
-            <i class="fa-solid fa-star" style="color: #ffdf00"></i>
-            <i class="fas fa-star" style="color: #cbd5e1"></i>
-            (4.0)
-          </p>
-          <p class="product-weight">{{ product.weight }} gram</p>
-          <div class="product-pricing">
-            <span class="current-price">${{ product.price }}</span>
-            <span v-if="product.oldPrice" class="old-price"
-              >${{ product.oldPrice }}</span
-            >
-            <button class="add-to-cart">Add +</button>
-          </div>
+          <button class="add-to-cart">Add +</button>
         </div>
       </div>
-    </RouterLink>
+    </div>
   </div>
 </template>
 
