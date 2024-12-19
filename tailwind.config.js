@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
-  theme: {
-    extend: {},
+export const content = ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}']
+export const theme = {
+  extend: {
+    colors: {
+      green: '#10b981',
+    },
   },
-  plugins: [],
 }
-
+export const plugins = [require('flowbite/plugin')]

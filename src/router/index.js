@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import Page from '@/views/Page.vue'
 import Section from '@/views/Section.vue'
 import Footer from '@/components/Footer.vue'
+import Header from '@/components/Header.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
